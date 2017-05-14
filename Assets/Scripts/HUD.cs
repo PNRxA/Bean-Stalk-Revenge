@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class HUD : MonoBehaviour
 {
+    public bool placingTower = false;
+    public GameObject[] towers;
+    public float activeTowerSpeed = 3.0f;
 
+    private GameObject activeTower;
+    private Vector3 activeTowerTargetPos;
     private float scrW;
     private float scrH;
 
@@ -17,7 +22,10 @@ public class HUD : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (placingTower)
+        {
+            TowerToCursor();
+        }
     }
 
     void OnGUI()
@@ -25,14 +33,18 @@ public class HUD : MonoBehaviour
         scrW = Screen.width / 16;
         scrH = Screen.height / 10;
         GUI.BeginGroup(new Rect(scrW * 12, 0, scrW * 4.18f, scrH * 10.05f));
-        
+
         GUI.Box(new Rect(0, 0, scrW * 4.18f, scrH * 10.05f), "");
 
-        GUI.Box(new Rect(0, 0, scrW * 4.18f, scrH), "Buy Towers");
+        GUI.Box(new Rect(0, 0, scrW * 4.18f, scrH), "Buy Towers \nMoney: " + GameManager.Money);
 
-        if (GUI.Button(new Rect(scrW, scrH * 2, scrW, scrH), "1"))
+        if (GUI.Button(new Rect(scrW, scrH * 2, scrW * 2, scrH), "Basic Tower \n250 Beans"))
         {
-
+            if (GameManager.Money >= 250)
+            {
+                GameManager.Money -= 250;
+                CreateTower(0);
+            }
         }
 
         if (GUI.Button(new Rect(scrW, scrH * 3.5f, scrW, scrH), "2"))
@@ -46,5 +58,31 @@ public class HUD : MonoBehaviour
         }
 
         GUI.EndGroup();
+    }
+
+    // Create tower
+    void CreateTower(int tower)
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        placingTower = true;
+        activeTower = Instantiate(towers[tower], transform.position, transform.rotation);
+    }
+
+    // Lock tower to ""
+    void TowerToCursor()
+    {
+        RaycastHit hit;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hit) && hit.transform.tag == "Placeable")
+        {
+            activeTower.transform.position = hit.transform.position;
+            activeTower.transform.Translate(Vector3.up * 1, Space.World);
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            placingTower = false;
+        }
+
     }
 }

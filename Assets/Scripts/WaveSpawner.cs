@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class WaveSpawner : MonoBehaviour
 {
-    public Transform enemyPrefab;
+    public Enemy enemyPrefab;
     public Transform spawnPoint;
 
-    public Text waveCountdownText;
+    //public Text waveCountdownText;
 
     public float timeBetweenWaves = 5f;
-    public float countdown = 2f;
+    public float countdown = 0f;
 
     private int waveIndex = 0;
 
@@ -26,7 +26,7 @@ public class WaveSpawner : MonoBehaviour
 
         countdown -= Time.deltaTime;
 
-        waveCountdownText.text = Mathf.Floor(countdown).ToString();
+        //waveCountdownText.text = Mathf.Floor(countdown).ToString();
 	}
 
     IEnumerator SpawnWave()
@@ -44,6 +44,7 @@ public class WaveSpawner : MonoBehaviour
 
     void SpawnEnemy()
     {
-        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        Enemy spawnEnemy = Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        spawnEnemy.target = GameObject.FindGameObjectWithTag("Target").transform;        
     }
 }
