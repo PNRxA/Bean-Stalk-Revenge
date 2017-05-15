@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
 
-    public float health = 100f;
+    public float health = 2f;
     public float damage = 10f;
     public float moveSpeed = 3.5f;
     public Transform target;

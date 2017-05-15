@@ -7,7 +7,9 @@ public class Stalk : MonoBehaviour
     public GameObject aim;
     public bool shootingStalk = false;
     public GameObject bean;
-    public float speed = 5f;
+    public float speed = 20f;
+    public ParticleSystem explosion;
+    public bool exploded = false;
 
     private Vector3 beanTarget;
     private GameObject activeBean;
@@ -27,7 +29,14 @@ public class Stalk : MonoBehaviour
         {
             if (activeBean.transform.position == beanTarget)
             {
-                Destroy(activeBean);
+                activeBean.GetComponent<Renderer>().enabled = false;
+                Destroy(activeBean, .25f);
+                if (!exploded)
+                {
+                    ParticleSystem explode = Instantiate(explosion, beanTarget, Quaternion.Euler(-90, 0, 0));
+                    Destroy(explode.gameObject, 1f);
+                    exploded = true;
+                }
                 beanInMotion = false;
             }
         }
@@ -47,12 +56,13 @@ public class Stalk : MonoBehaviour
                 }
             }
             // If unclick, set as not shooting and shoot bean
-            if (Input.GetMouseButtonUp(0))
+            if (Input.GetMouseButtonUp(0) && shootingStalk)
             {
                 Vector3 target = aim.transform.position;
                 beanTarget = aim.transform.position;
                 shootingStalk = false;
                 beanInMotion = true;
+                exploded = false;
                 ShootBean();
             }
         }

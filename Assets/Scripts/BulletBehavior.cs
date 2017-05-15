@@ -22,7 +22,8 @@ public class BulletBehavior : MonoBehaviour {
         if (col.tag == "Enemy")
         {
             //towerShotFrom.targets.Remove(col.gameObject);
-            Destroy(col.gameObject);
+            Enemy target = col.gameObject.GetComponent<Enemy>();
+            target.health--;
             //towerShotFrom.bullets.Remove(this);
             Destroy(gameObject);
         }
