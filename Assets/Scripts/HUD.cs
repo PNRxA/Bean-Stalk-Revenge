@@ -12,6 +12,8 @@ public class HUD : MonoBehaviour
     private Vector3 activeTowerTargetPos;
     private float scrW;
     private float scrH;
+    private RaycastHit hit;
+    private Ray ray;
 
     // Use this for initialization
     void Start()
@@ -22,6 +24,12 @@ public class HUD : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // If clicking and not placing a tower then select the tower
+        if (Input.GetMouseButtonDown(0) && !placingTower)
+        {
+            SelectTower();
+        }
+        // If placing a tower, stick the tower to the cursor
         if (placingTower)
         {
             TowerToCursor();
@@ -35,8 +43,18 @@ public class HUD : MonoBehaviour
         GUI.BeginGroup(new Rect(scrW * 12, 0, scrW * 4.18f, scrH * 10.05f));
 
         GUI.Box(new Rect(0, 0, scrW * 4.18f, scrH * 10.05f), "");
+        // Only show wave info if countdown is above 0
+        string waveInfo;
+        if (WaveSpawner.countdown > 0)
+        {
+            waveInfo = "\nNext Wave: " + WaveSpawner.countdown;
+        }
+        else
+        {
+            waveInfo = null;
+        }
 
-        GUI.Box(new Rect(0, 0, scrW * 4.18f, scrH), "Buy Towers \nMoney: " + GameManager.Money);
+        GUI.Box(new Rect(0, 0, scrW * 4.18f, scrH * 1.2f), "Buy Towers \nMoney: " + GameManager.Money + waveInfo);
 
         if (GUI.Button(new Rect(scrW, scrH * 2, scrW * 2, scrH), "Basic Tower \n250 Beans"))
         {
@@ -57,13 +75,20 @@ public class HUD : MonoBehaviour
 
         }
 
+        if (WaveSpawner.countdown > 3)
+        {
+            if (GUI.Button(new Rect(scrW, scrH * 6.5f, scrW * 3, scrH), "Start next wave NOW"))
+            {
+                WaveSpawner.countdown = 3;
+            }
+        }
+
         GUI.EndGroup();
     }
 
     // Create tower
     void CreateTower(int tower)
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         placingTower = true;
         activeTower = Instantiate(towers[tower], transform.position, transform.rotation);
     }
@@ -71,18 +96,49 @@ public class HUD : MonoBehaviour
     // Lock tower to ""
     void TowerToCursor()
     {
-        RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit) && hit.transform.tag == "Placeable")
         {
-            activeTower.transform.position = hit.transform.position;
+            activeTower.transform.position = hit.point;
             activeTower.transform.Translate(Vector3.up * 1, Space.World);
         }
 
         if (Input.GetMouseButtonDown(0))
         {
             placingTower = false;
-        }
+            Tower towerToPlace = activeTower.gameObject.GetComponent<Tower>();
+            towerToPlace.placed = true;
 
+            //activeTower.GetComponentInChildren<Renderer>().enabled = false;  
+            ShowRadii(false);
+        }
+    }
+    
+    // Show the radius for the tower if you are clicking on it or hide the radius if you're not clicking on a tower
+    void SelectTower()
+    {
+        ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hit) && hit.transform.tag == "Tower")
+        {
+            // Doesn't work because it hates me
+            //GameObject towerSelected = hit.transform.gameObject;
+            //towerSelected.GetComponentInChildren<Renderer>().enabled = true;
+
+            ShowRadii(true);
+        }
+        else
+        {
+            ShowRadii(false);
+        }
+    }
+
+    // Show or hide the tower radius if true/false
+    void ShowRadii(bool bigIfTrue)
+    {
+        GameObject[] disableRadius = GameObject.FindGameObjectsWithTag("Radius");
+        foreach (var tower in disableRadius)
+        {
+            tower.GetComponent<Renderer>().enabled = bigIfTrue;
+        }
     }
 }

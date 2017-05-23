@@ -7,6 +7,7 @@ public class Tower : MonoBehaviour
 
     public List<GameObject> targets;
     public BulletBehavior bullet;
+    public bool placed = false;
 
     // Use this for initialization
     void Start()

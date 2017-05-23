@@ -10,7 +10,8 @@ public class Enemy : MonoBehaviour
     public float damage = 10f;
     public float moveSpeed = 3.5f;
     public Transform target;
-
+    public int value = 10;
+    
     protected NavMeshAgent agent;
     protected bool isAttacking = false;
     protected bool isAgentActive = true;
@@ -41,7 +42,21 @@ public class Enemy : MonoBehaviour
     }
 
     protected virtual void Attack() { }
-    protected virtual void OnDeath() { }
+    protected virtual void OnDeath()
+    {
+        // Increate currency by value of enemy
+        GameManager.Money += value;
+        // Find if last enemy remaining
+        GameObject[] enemiesRemaining = GameObject.FindGameObjectsWithTag("Enemy");
+        // If last enemy remaining, end the wave and begin coutdown
+        if (enemiesRemaining.Length == 1)
+        {
+            GameManager.inWave = false;
+            WaveSpawner.countdown = 20;
+        }
+        // Commit sudoku
+        Destroy(gameObject);
+    }
 
     // Use this for initialization
     protected virtual void Awake()

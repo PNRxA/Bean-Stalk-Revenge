@@ -18,15 +18,18 @@ public class Tower_01 : Tower
 
     protected override void Shoot(GameObject targetToShoot)
     {
-        instantiationTimer -= Time.deltaTime; // Timer
-        if (instantiationTimer <= 0) //Check if power is needed && if timer == 0
+        if (placed)
         {
-            // Create bullet
-            BulletBehavior bulletPrefab = Instantiate(bullet, transform.position, transform.rotation);
-            bulletPrefab.targetEnemy = targetToShoot.transform;
-            bullets.Add(bulletPrefab);
+            instantiationTimer -= Time.deltaTime; // Timer
+            if (instantiationTimer <= 0) //Check if power is needed && if timer == 0
+            {
+                // Create bullet
+                BulletBehavior bulletPrefab = Instantiate(bullet, transform.position, transform.rotation);
+                bulletPrefab.targetEnemy = targetToShoot.transform;
+                bullets.Add(bulletPrefab);
 
-            instantiationTimer = instantiationTimerUpdate;
+                instantiationTimer = instantiationTimerUpdate;
+            }
         }
 
     }

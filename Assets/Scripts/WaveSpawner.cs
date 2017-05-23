@@ -10,21 +10,27 @@ public class WaveSpawner : MonoBehaviour
 
     //public Text waveCountdownText;
 
-    public float timeBetweenWaves = 5f;
-    public float countdown = 0f;
+    //public float timeBetweenWaves = 5f;
 
-    private int waveIndex = 0;
+    public static float countdown = 3f;
+
+    private int waveIndex = 1;
 
 	// Update is called once per frame
 	void Update ()
     {
-		if(countdown <= 0)
+        // If the countdown is <= 0 and not in a wave then spawn a wave
+		if(countdown <= 0 && !GameManager.inWave)
         {
+            GameManager.inWave = true;
             StartCoroutine(SpawnWave());
-            countdown = timeBetweenWaves;
+        }
+        // If the countdown is active then count down
+        if (countdown > 0)
+        {
+            countdown -= Time.deltaTime;
         }
 
-        countdown -= Time.deltaTime;
 
         //waveCountdownText.text = Mathf.Floor(countdown).ToString();
 	}
