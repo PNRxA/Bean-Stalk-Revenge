@@ -53,7 +53,15 @@ public class Tower_01 : Tower
             // If the bullet exists move it towards the target
             else
             {
-                bullets[i].transform.position = Vector3.MoveTowards(bullets[i].transform.position, bullets[i].targetEnemy.position, step);
+                // Double check if target enemy doesn't exist as errors were happening (maybe can remove first check now) TODO Bullets get stuck if two towers attack at same time and enemy dies while other bullet is traveling 
+                if (bullets[i].targetEnemy)
+                {
+                    bullets[i].transform.position = Vector3.MoveTowards(bullets[i].transform.position, bullets[i].targetEnemy.position, step);
+                }
+                else
+                {
+                    Destroy(bullets[i]);
+                }
             }
         }
     }
