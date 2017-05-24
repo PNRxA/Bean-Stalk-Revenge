@@ -113,7 +113,7 @@ public class HUD : MonoBehaviour
             ShowRadii(false);
         }
     }
-    
+
     // Show the radius for the tower if you are clicking on it or hide the radius if you're not clicking on a tower
     void SelectTower()
     {
@@ -121,10 +121,11 @@ public class HUD : MonoBehaviour
         if (Physics.Raycast(ray, out hit) && hit.transform.tag == "Tower")
         {
             // Doesn't work because it hates me
-            //GameObject towerSelected = hit.transform.gameObject;
-            //towerSelected.GetComponentInChildren<Renderer>().enabled = true;
+            GameObject towerSelected = hit.transform.gameObject;
+            bool radiusToggle = towerSelected.transform.GetChild(0).GetComponent<Renderer>().enabled;
+            towerSelected.transform.GetChild(0).GetComponent<Renderer>().enabled = !radiusToggle;
 
-            ShowRadii(true);
+            //ShowRadii(true);
         }
         else
         {
