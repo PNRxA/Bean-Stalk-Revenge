@@ -120,7 +120,7 @@ public class HUD : MonoBehaviour
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit) && hit.transform.tag == "Tower")
         {
-            // Doesn't work because it hates me
+            // When clicking on a tower, get the child and enable the renderer (shows radius)
             GameObject towerSelected = hit.transform.gameObject;
             bool radiusToggle = towerSelected.transform.GetChild(0).GetComponent<Renderer>().enabled;
             towerSelected.transform.GetChild(0).GetComponent<Renderer>().enabled = !radiusToggle;
