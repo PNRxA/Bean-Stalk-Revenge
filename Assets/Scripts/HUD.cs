@@ -56,30 +56,26 @@ public class HUD : MonoBehaviour
 
         GUI.Box(new Rect(0, 0, scrW * 4.18f, scrH * 1.2f), "Buy Towers \nMoney: " + GameManager.Money + waveInfo);
 
-        if (GUI.Button(new Rect(scrW, scrH * 2, scrW * 2, scrH), "Basic Tower \n250 Beans"))
+        if (GUI.Button(new Rect(scrW, scrH * 2, scrW * 3, scrH), "Basic Tower \n250 Beans"))
         {
-            if (GameManager.Money >= 250)
-            {
-                GameManager.Money -= 250;
-                CreateTower(0);
-            }
+            CreateTower(0, 250);
         }
 
-        if (GUI.Button(new Rect(scrW, scrH * 3.5f, scrW, scrH), "2"))
+        if (GUI.Button(new Rect(scrW, scrH * 3.5f, scrW * 3, scrH), "Intermediate Tower \n500 Beans"))
         {
-
+            CreateTower(1, 500);
         }
 
-        if (GUI.Button(new Rect(scrW, scrH * 5, scrW, scrH), "3"))
+        if (GUI.Button(new Rect(scrW, scrH * 5, scrW * 3, scrH), "Advanced Tower \n1000 Beans"))
         {
-
+            CreateTower(2, 1000);
         }
-
+        // If countdown is more than 3 show options to skip countdown
         if (WaveSpawner.countdown > 3)
         {
             if (GUI.Button(new Rect(scrW, scrH * 6.5f, scrW * 3, scrH), "Start next wave NOW"))
             {
-                WaveSpawner.countdown = 3;
+                WaveSpawner.countdown = 1;
             }
         }
 
@@ -87,10 +83,15 @@ public class HUD : MonoBehaviour
     }
 
     // Create tower
-    void CreateTower(int tower)
+    void CreateTower(int tower, int cost)
     {
-        placingTower = true;
-        activeTower = Instantiate(towers[tower], transform.position, transform.rotation);
+        if (GameManager.Money >= cost)
+        {
+            GameManager.Money -= cost;
+            placingTower = true;
+            activeTower = Instantiate(towers[tower], transform.position, transform.rotation);
+        }
+
     }
 
     // Lock tower to ""

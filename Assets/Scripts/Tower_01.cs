@@ -7,8 +7,8 @@ public class Tower_01 : Tower
     public List<BulletBehavior> bullets;
     public float speed = 50f;
 
-    private float instantiationTimer = 1f;
-    private float instantiationTimerUpdate = 1f;
+    private float instantiationTimer = 1.5f;
+    private float instantiationTimerUpdate = 1.5f;
 
     protected override void Update()
     {
@@ -40,11 +40,6 @@ public class Tower_01 : Tower
         float step = speed * Time.deltaTime;
         for (int i = 0; i < bullets.Count; i++)
         {
-            // If the target enemy doesn't exist kill the bullet
-            if (bullets[i].targetEnemy == null)
-            {
-                Destroy(bullets[i]);
-            }
             // If the bullet doesn't exist remove it from the list of alive bullets
             if (bullets[i] == null)
             {
@@ -60,7 +55,7 @@ public class Tower_01 : Tower
                 }
                 else
                 {
-                    Destroy(bullets[i]);
+                    Destroy(bullets[i].gameObject);
                 }
             }
         }
