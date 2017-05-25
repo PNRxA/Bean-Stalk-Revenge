@@ -123,6 +123,7 @@ public class HUD : MonoBehaviour
         {
             // When clicking on a tower, get the child and enable the renderer (shows radius)
             GameObject towerSelected = hit.transform.gameObject;
+            // The radius needs to be the first child of the tower.
             bool radiusToggle = towerSelected.transform.GetChild(0).GetComponent<Renderer>().enabled;
             towerSelected.transform.GetChild(0).GetComponent<Renderer>().enabled = !radiusToggle;
 
