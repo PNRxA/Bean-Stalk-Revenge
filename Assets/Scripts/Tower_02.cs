@@ -40,7 +40,10 @@ public class Tower_02 : Tower
 
     void DamageTargets()
     {
-        targets[0].GetComponent<Enemy>().health -= 0.02f;
+        if (targets[0] != null)
+        {
+            targets[0].GetComponent<Enemy>().health -= 0.02f;
+        }
     }
 
 }

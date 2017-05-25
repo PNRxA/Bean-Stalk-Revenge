@@ -11,7 +11,9 @@ public class Enemy : MonoBehaviour
     public float moveSpeed = 3.5f;
     public Transform target;
     public int value = 10;
-    
+
+    public BeanBehavior beanBehavior;
+
     protected NavMeshAgent agent;
     protected bool isAttacking = false;
     protected bool isAgentActive = true;
@@ -31,7 +33,7 @@ public class Enemy : MonoBehaviour
             OnDeath();
         }
     }
-    
+
     protected virtual void FixedUpdate()
     {
         // If at the target attack it
@@ -39,6 +41,9 @@ public class Enemy : MonoBehaviour
         {
             Attack();
         }
+
+        // Need to get beanBehavior before destroyed
+        beanBehavior = FindObjectOfType<BeanBehavior>();
     }
 
     protected virtual void Attack() { }
@@ -48,14 +53,29 @@ public class Enemy : MonoBehaviour
         GameManager.Money += value;
         // Find if last enemy remaining
         GameObject[] enemiesRemaining = GameObject.FindGameObjectsWithTag("Enemy");
+
+        // Checking for beanbehaviour killing the last few enemies
+        if (beanBehavior != null)
+        {
+            if (enemiesRemaining.Length == beanBehavior.enemiesToKill.Count)
+            {
+                EndWave();
+            }
+        }
+
         // If last enemy remaining, end the wave and begin coutdown
         if (enemiesRemaining.Length == 1)
         {
-            GameManager.inWave = false;
-            WaveSpawner.countdown = 20;
+            EndWave();
         }
         // Commit sudoku
         Destroy(gameObject);
+    }
+
+    void EndWave()
+    {
+        GameManager.inWave = false;
+        WaveSpawner.countdown = 20;
     }
 
     // Use this for initialization
@@ -87,7 +107,7 @@ public class Enemy : MonoBehaviour
     {
         return health <= 0;
     }
-    
+
     // Check if agent is at the target
     protected bool IsAtTarget()
     {
