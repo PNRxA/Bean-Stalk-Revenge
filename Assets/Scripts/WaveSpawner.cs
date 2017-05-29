@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class WaveSpawner : MonoBehaviour
 {
-    public Enemy enemyPrefab;
+    public Enemy[] enemyPrefab;
     public Transform spawnPoint;
 
     public static float countdown = 3f;
@@ -46,7 +46,7 @@ public class WaveSpawner : MonoBehaviour
 
     void SpawnEnemy()
     {
-        Enemy spawnEnemy = Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        Enemy spawnEnemy = Instantiate(enemyPrefab[Random.Range(0, 3)], spawnPoint.position, spawnPoint.rotation);
         spawnEnemy.target = GameObject.FindGameObjectWithTag("Target").transform;
     }
 }

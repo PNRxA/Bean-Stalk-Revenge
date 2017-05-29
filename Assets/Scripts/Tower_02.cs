@@ -33,7 +33,8 @@ public class Tower_02 : Tower
 
     protected override void Shoot(GameObject targetToShoot)
     {
-        Vector3[] positions = new[] { transform.position, targets[0].transform.position };
+        Vector3[] positions = new[] { transform.position, targetToShoot.transform.position };
+
         lRenderer.enabled = true;
         lRenderer.SetPositions(positions);
     }
@@ -42,8 +43,7 @@ public class Tower_02 : Tower
     {
         if (targets[0] != null)
         {
-            targets[0].GetComponent<Enemy>().health -= 0.02f;
+            targets[0].GetComponent<Enemy>().health -= 0.02f * level;
         }
     }
-
 }

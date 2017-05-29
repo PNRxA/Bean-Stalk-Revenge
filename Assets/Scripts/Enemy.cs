@@ -46,7 +46,10 @@ public class Enemy : MonoBehaviour
         beanBehavior = FindObjectOfType<BeanBehavior>();
     }
 
-    protected virtual void Attack() { }
+    protected virtual void Attack()
+    {
+    }
+
     protected virtual void OnDeath()
     {
         // Increate currency by value of enemy

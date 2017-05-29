@@ -28,7 +28,7 @@ public class Tower_01 : Tower
                 bulletPrefab.targetEnemy = targetToShoot.transform;
                 bullets.Add(bulletPrefab);
 
-                instantiationTimer = instantiationTimerUpdate;
+                instantiationTimer = instantiationTimerUpdate - (level * .3f);
             }
         }
 
