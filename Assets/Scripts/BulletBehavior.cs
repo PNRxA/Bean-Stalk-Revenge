@@ -17,20 +17,20 @@ public class BulletBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // If there's no enemy then kill self
         if (!targetEnemy || targetEnemy == null)
         {
             Destroy(gameObject);
         }
     }
 
+    // If hitting enemy then damage and kill self
     void OnTriggerEnter(Collider col)
     {
         if (col.tag == "Enemy")
         {
-            //towerShotFrom.targets.Remove(col.gameObject);
             Enemy target = col.gameObject.GetComponent<Enemy>();
             target.health--;
-            //towerShotFrom.bullets.Remove(this);
             Destroy(gameObject);
         }
     }

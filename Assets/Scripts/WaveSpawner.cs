@@ -26,24 +26,21 @@ public class WaveSpawner : MonoBehaviour
         {
             countdown -= Time.deltaTime;
         }
-
-
-        //waveCountdownText.text = Mathf.Floor(countdown).ToString();
     }
 
     IEnumerator SpawnWave()
     {
-        //Debug.Log("Wave Incoming!");
-
+        // Spawn enemy based on wave number
         for (int i = 0; i < waveIndex; i++)
         {
             SpawnEnemy();
             yield return new WaitForSeconds(0.5f);
         }
-
+        // Increase wave number after whole wave has been spawned
         waveIndex++;
     }
 
+    // Spawn random enemy
     void SpawnEnemy()
     {
         Enemy spawnEnemy = Instantiate(enemyPrefab[Random.Range(0, 3)], spawnPoint.position, spawnPoint.rotation);

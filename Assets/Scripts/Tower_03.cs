@@ -12,7 +12,9 @@ public class Tower_03 : Tower
     /// </summary>
     void Awake()
     {
+        // Set particlesystem 
         particles = GetComponentInChildren<ParticleSystem>();
+        // Stop particle emission at spawn
         em = particles.emission;
         em.enabled = false;
     }
@@ -20,6 +22,7 @@ public class Tower_03 : Tower
     protected override void FixedUpdate()
     {
         base.FixedUpdate();
+        // If there are no targets than disable particle emission
         if (targets.Count <= 0)
         {
             em.enabled = false;
@@ -29,6 +32,7 @@ public class Tower_03 : Tower
     protected override void OnTriggerExit(Collider col)
     {
         base.OnTriggerExit(col);
+        // If an enemy leaves radius then set speed back to normal
         if (col.tag == "Enemy")
         {
             col.gameObject.GetComponent<NavMeshAgent>().speed = col.gameObject.GetComponent<Enemy>().moveSpeed;
@@ -38,17 +42,24 @@ public class Tower_03 : Tower
     // Use this for initialization
     protected override void Shoot(GameObject targetToShoot)
     {
+        // If the tower is placed then allow it to attack
         if (placed)
         {
+            // Enable particle emissions
             em.enabled = true;
+            // For each target, slow and damage
             for (int i = 0; i < targets.Count; i++)
             {
+                // Get navmeshagent and enemy script
                 NavMeshAgent currentAgent = targets[i].GetComponent<NavMeshAgent>();
                 Enemy currentEnemy = targets[i].GetComponent<Enemy>();
+                // Only reduce speed if it is more than when it would be reduced to (to prevent overriding stronger tower)
                 if (currentAgent.speed > currentEnemy.moveSpeed / level)
                 {
+                    // Reduce the agent speed based on level
                     currentAgent.speed = currentEnemy.moveSpeed / level;
                 }
+                // Slowly remove all enemies health within radius
                 currentEnemy.health -= (.001f * level);
             }
         }

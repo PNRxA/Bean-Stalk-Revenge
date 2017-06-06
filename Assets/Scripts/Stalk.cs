@@ -15,16 +15,11 @@ public class Stalk : MonoBehaviour
     private GameObject activeBean;
     private bool beanInMotion = false;
 
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {
         MoveBean();
+        // If there is a target and an active bean then spawn an explosion and destroy if it's reached the target
         if (beanTarget != null && activeBean != null)
         {
             if (activeBean.transform.position == beanTarget)
@@ -90,23 +85,27 @@ public class Stalk : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit))
         {
+            // Set the aimpos to the oposite of the cursor
             Vector3 aimPos = -hit.point;
-            //aimPos.x -= 10;
-            //aimPos.z -= 8;
             aimPos.y = 0.6f;
 
             aim.transform.position = aimPos;
         }
     }
 
+    // Shoot bean
     void ShootBean()
     {
+        // Set active bean to the new instantiation
         activeBean = Instantiate(bean, transform.position, transform.rotation);
     }
 
+    // Move bean
     void MoveBean()
     {
+        // Speed of bean
         float step = speed * Time.deltaTime;
+        // If there is an active bean move it to the target at defined speed
         if (activeBean != null)
         {
             activeBean.transform.position = Vector3.MoveTowards(activeBean.transform.position, beanTarget, step);
