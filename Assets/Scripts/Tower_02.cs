@@ -11,20 +11,13 @@ public class Tower_02 : Tower
         lRenderer = gameObject.GetComponent<LineRenderer>();
     }
 
-    protected override void Update()
+    protected override void FixedUpdate()
     {
-        base.Update();
+        base.FixedUpdate();
         if (targets.Count <= 0)
         {
             lRenderer.enabled = false;
         }
-    }
-
-    /// <summary>
-    /// This function is called every fixed framerate frame, if the MonoBehaviour is enabled.
-    /// </summary>
-    void FixedUpdate()
-    {
         if (lRenderer.enabled)
         {
             DamageTargets();
@@ -33,17 +26,20 @@ public class Tower_02 : Tower
 
     protected override void Shoot(GameObject targetToShoot)
     {
-        Vector3[] positions = new[] { transform.position, targetToShoot.transform.position };
+        if (placed)
+        {
+            Vector3[] positions = new[] { transform.position, targetToShoot.transform.position };
 
-        lRenderer.enabled = true;
-        lRenderer.SetPositions(positions);
+            lRenderer.enabled = true;
+            lRenderer.SetPositions(positions);
+        }
     }
 
     void DamageTargets()
     {
         if (targets[0] != null)
         {
-            targets[0].GetComponent<Enemy>().health -= 0.02f * level;
+            targets[0].GetComponent<Enemy>().health -= (0.02f * level);
         }
     }
 }

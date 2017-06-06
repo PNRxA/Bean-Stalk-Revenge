@@ -10,13 +10,8 @@ public class Tower : MonoBehaviour
     public bool placed = false;
     public int level = 1;
 
-    // Use this for initialization
-    void Start()
-    {
-    }
-
     // Update is called once per frame
-    protected virtual void Update()
+    protected virtual void FixedUpdate()
     {
         Attack();
     }
@@ -31,7 +26,7 @@ public class Tower : MonoBehaviour
     }
 
     // Remove enemy from list to attack
-    protected void OnTriggerExit(Collider col)
+    protected virtual void OnTriggerExit(Collider col)
     {
         if (col.tag == "Enemy")
         {

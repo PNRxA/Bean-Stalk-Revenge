@@ -10,9 +10,9 @@ public class Tower_01 : Tower
     private float instantiationTimer = 1.5f;
     private float instantiationTimerUpdate = 1.5f;
 
-    protected override void Update()
+    protected override void FixedUpdate()
     {
-        base.Update();
+        base.FixedUpdate();
         moveBullets();
     }
 
