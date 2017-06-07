@@ -49,7 +49,7 @@ public class HUD : MonoBehaviour
         // The buy part of the menu
         TowerBuyMenu();
         // Only show upgrad menu when clicking on a tower
-        if (inUpgradeMenu)
+        if (inUpgradeMenu && towerSelected)
         {
             // The menu shown for tower upgrades after clicking on a tower
             ShowUpgradeMenu();
@@ -78,22 +78,25 @@ public class HUD : MonoBehaviour
         GUI.Box(new Rect(0, 0, scrW * 4.18f, scrH * 1.2f), "Buy Towers \nMoney: " + GameManager.Money + waveInfo);
 
         GUI.Box(new Rect(scrW, scrH, scrW * 4.18f, scrH), "Lives: " + GameManager.health);
-        if (GUI.Button(new Rect(scrW, scrH * 2, scrW * 3, scrH), "Basic Tower \n250 Beans"))
+        if (!placingTower)
         {
-            // Create tower ID and COST
-            CreateTower(0, 250);
-        }
+            if (GUI.Button(new Rect(scrW, scrH * 2, scrW * 3, scrH), "Basic Tower \n250 Beans"))
+            {
+                // Create tower ID and COST
+                CreateTower(0, 250);
+            }
 
-        if (GUI.Button(new Rect(scrW, scrH * 3.5f, scrW * 3, scrH), "Intermediate Tower \n500 Beans"))
-        {
-            // Create tower ID and COST
-            CreateTower(1, 500);
-        }
+            if (GUI.Button(new Rect(scrW, scrH * 3.5f, scrW * 3, scrH), "Intermediate Tower \n500 Beans"))
+            {
+                // Create tower ID and COST
+                CreateTower(1, 500);
+            }
 
-        if (GUI.Button(new Rect(scrW, scrH * 5, scrW * 3, scrH), "Advanced Tower \n1000 Beans"))
-        {
-            // Create tower ID and COST
-            CreateTower(2, 1000);
+            if (GUI.Button(new Rect(scrW, scrH * 5, scrW * 3, scrH), "Advanced Tower \n1000 Beans"))
+            {
+                // Create tower ID and COST
+                CreateTower(2, 1000);
+            }
         }
         // If countdown is more than 3 show options to skip countdown
         if (WaveSpawner.countdown > 3)
@@ -140,6 +143,11 @@ public class HUD : MonoBehaviour
                 towerToUpgrade.level += 1;
             }
         }
+        // Delete tower
+        if (GUI.Button(new Rect(scrW, scrH * 4, scrW * 2, scrH), "Delete"))
+        {
+            Destroy(towerSelected.gameObject);
+        }
         GUI.EndGroup();
     }
 
@@ -172,7 +180,7 @@ public class HUD : MonoBehaviour
         }
 
         // If click then place tower at position
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && activeTower.gameObject.transform.position.y < 10)
         {
             placingTower = false;
             Tower towerToPlace = activeTower.gameObject.GetComponent<Tower>();
