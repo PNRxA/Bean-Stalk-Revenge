@@ -50,17 +50,20 @@ public class Tower_03 : Tower
             // For each target, slow and damage
             for (int i = 0; i < targets.Count; i++)
             {
-                // Get navmeshagent and enemy script
-                NavMeshAgent currentAgent = targets[i].GetComponent<NavMeshAgent>();
-                Enemy currentEnemy = targets[i].GetComponent<Enemy>();
-                // Only reduce speed if it is more than when it would be reduced to (to prevent overriding stronger tower)
-                if (currentAgent.speed > currentEnemy.moveSpeed / level)
+                if (targets[i])
                 {
-                    // Reduce the agent speed based on level
-                    currentAgent.speed = currentEnemy.moveSpeed / level;
+                    // Get navmeshagent and enemy script
+                    NavMeshAgent currentAgent = targets[i].GetComponent<NavMeshAgent>();
+                    Enemy currentEnemy = targets[i].GetComponent<Enemy>();
+                    // Only reduce speed if it is more than when it would be reduced to (to prevent overriding stronger tower)
+                    if (currentAgent.speed > currentEnemy.moveSpeed / level)
+                    {
+                        // Reduce the agent speed based on level
+                        currentAgent.speed = currentEnemy.moveSpeed / level;
+                    }
+                    // Slowly remove all enemies health within radius
+                    currentEnemy.health -= (.001f * level);
                 }
-                // Slowly remove all enemies health within radius
-                currentEnemy.health -= (.001f * level);
             }
         }
     }
