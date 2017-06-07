@@ -48,6 +48,9 @@ public class Enemy : MonoBehaviour
 
     protected virtual void Attack()
     {
+        // Remove health based on enemy and kill self
+        GameManager.health -= Mathf.RoundToInt(health);
+        health = 0;
     }
 
     protected virtual void OnDeath()

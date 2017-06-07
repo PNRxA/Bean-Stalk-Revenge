@@ -44,6 +44,8 @@ public class WaveSpawner : MonoBehaviour
     void SpawnEnemy()
     {
         Enemy spawnEnemy = Instantiate(enemyPrefab[Random.Range(0, 3)], spawnPoint.position, spawnPoint.rotation);
+        // Enemy health is set based on the wave you're on
+        spawnEnemy.health *= waveIndex;
         spawnEnemy.target = GameObject.FindGameObjectWithTag("Target").transform;
     }
 }
