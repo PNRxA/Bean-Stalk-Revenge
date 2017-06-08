@@ -23,11 +23,13 @@ public class BeanBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Set the random rotation defined above
         transform.Rotate(rotateX, rotateY, rotateZ);
     }
 
     void OnTriggerEnter(Collider col)
     {
+        // If hitting an enemy damage them
         if (col.tag == "Enemy")
         {
             Enemy target = col.gameObject.GetComponent<Enemy>();
@@ -37,6 +39,7 @@ public class BeanBehavior : MonoBehaviour
     }
     void OnTriggerExit(Collider col)
     {
+        // If the enemy managed to leave the radius before it explodes then it doesn't get destroyed
         if (col.tag == "Enemy")
         {
             Enemy target = col.gameObject.GetComponent<Enemy>();
@@ -46,6 +49,7 @@ public class BeanBehavior : MonoBehaviour
 
     private IEnumerator killEnemies(float waitTime)
     {
+        // Wait a small delay then damage enemies
         yield return new WaitForSeconds(waitTime);
 
         for (int i = 0; i < enemiesToKill.Count; i++)

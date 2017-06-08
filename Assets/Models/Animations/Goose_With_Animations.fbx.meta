@@ -1,0 +1,1156 @@
+fileFormatVersion: 2
+guid: ce51e78b44b49d84a9749a8b3ee3574a
+timeCreated: 1496720858
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Base_jnt
+    100002: BotNeck_jnt
+    100004: curve4
+    100006: curve5
+    100008: end_jnt
+    100010: //RootNode
+    100012: group2
+    100014: group3
+    100016: group4
+    100018: group5
+    100020: group6
+    100022: group7
+    100024: L_Base_Jnt
+    100026: L_bot_cluster
+    100028: L_Cannistertop_Jnt
+    100030: L_mid_cluster
+    100032: L_Pipe_Top
+    100034: L_top_cluster
+    100036: L_tube1_Jnt
+    100038: L_tube2_Jnt
+    100040: L_tube3_Jnt
+    100042: L_tube4_Jnt
+    100044: L_Tube_Ik
+    100046: L_tubetop_Jnt
+    100048: Neck_ik
+    100050: Neck_jnt_buff
+    100052: Neckelbow_ctrl
+    100054: pCylinder6
+    100056: Pipe_Left_Bottom
+    100058: Pipe_Left_Mid
+    100060: Pipe_Right_Bottom
+    100062: Pipe_Right_Mid
+    100064: R_Base_Jnt
+    100066: R_Bot_cluster
+    100068: R_Cannistertop_Jnt
+    100070: R_mid_cluster
+    100072: R_Pipe_top
+    100074: R_top_cluster
+    100076: R_tube1_Jnt
+    100078: R_tube2_Jnt
+    100080: R_tube3_Jnt
+    100082: R_tube4_Jnt
+    100084: R_tube_ik
+    100086: R_tubetop_Jnt
+    100088: s
+    100090: Top_neck_jnt
+    100092: Towerroot_jnt
+    400000: Base_jnt
+    400002: BotNeck_jnt
+    400004: curve4
+    400006: curve5
+    400008: end_jnt
+    400010: //RootNode
+    400012: group2
+    400014: group3
+    400016: group4
+    400018: group5
+    400020: group6
+    400022: group7
+    400024: L_Base_Jnt
+    400026: L_bot_cluster
+    400028: L_Cannistertop_Jnt
+    400030: L_mid_cluster
+    400032: L_Pipe_Top
+    400034: L_top_cluster
+    400036: L_tube1_Jnt
+    400038: L_tube2_Jnt
+    400040: L_tube3_Jnt
+    400042: L_tube4_Jnt
+    400044: L_Tube_Ik
+    400046: L_tubetop_Jnt
+    400048: Neck_ik
+    400050: Neck_jnt_buff
+    400052: Neckelbow_ctrl
+    400054: pCylinder6
+    400056: Pipe_Left_Bottom
+    400058: Pipe_Left_Mid
+    400060: Pipe_Right_Bottom
+    400062: Pipe_Right_Mid
+    400064: R_Base_Jnt
+    400066: R_Bot_cluster
+    400068: R_Cannistertop_Jnt
+    400070: R_mid_cluster
+    400072: R_Pipe_top
+    400074: R_top_cluster
+    400076: R_tube1_Jnt
+    400078: R_tube2_Jnt
+    400080: R_tube3_Jnt
+    400082: R_tube4_Jnt
+    400084: R_tube_ik
+    400086: R_tubetop_Jnt
+    400088: s
+    400090: Top_neck_jnt
+    400092: Towerroot_jnt
+    4300000: pCylinder6
+    7400000: Idle
+    7400002: Tower1 attack
+    7400004: Laser start
+    7400006: laser mid
+    7400008: Laser end
+    7400010: Dance start
+    7400012: Dancing
+    7400014: Dance fin
+    9500000: //RootNode
+    13700000: pCylinder6
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 4
+      lastFrame: 49.5
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: L_Tube_Ik
+        weight: 1
+      - path: Neck_ik
+        weight: 1
+      - path: Neckelbow_ctrl
+        weight: 1
+      - path: pCylinder6
+        weight: 1
+      - path: Pipe_Left_Bottom
+        weight: 1
+      - path: Pipe_Left_Bottom/group7
+        weight: 1
+      - path: Pipe_Left_Bottom/group7/L_bot_cluster
+        weight: 1
+      - path: Pipe_Left_Mid
+        weight: 1
+      - path: Pipe_Left_Mid/group6
+        weight: 1
+      - path: Pipe_Left_Mid/group6/L_mid_cluster
+        weight: 1
+      - path: Pipe_Right_Bottom
+        weight: 1
+      - path: Pipe_Right_Bottom/group3
+        weight: 1
+      - path: Pipe_Right_Bottom/group3/R_Bot_cluster
+        weight: 1
+      - path: Pipe_Right_Mid
+        weight: 1
+      - path: Pipe_Right_Mid/group2
+        weight: 1
+      - path: Pipe_Right_Mid/group2/R_mid_cluster
+        weight: 1
+      - path: R_tube_ik
+        weight: 1
+      - path: s
+        weight: 1
+      - path: s/L_Pipe_Top
+        weight: 1
+      - path: s/L_Pipe_Top/group5
+        weight: 1
+      - path: s/L_Pipe_Top/group5/L_top_cluster
+        weight: 1
+      - path: s/R_Pipe_top
+        weight: 1
+      - path: s/R_Pipe_top/group4
+        weight: 1
+      - path: s/R_Pipe_top/group4/R_top_cluster
+        weight: 1
+      - path: Towerroot_jnt
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt/BotNeck_jnt
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt/BotNeck_jnt/Neck_jnt_buff
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt/BotNeck_jnt/Neck_jnt_buff/Top_neck_jnt
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt/BotNeck_jnt/Neck_jnt_buff/Top_neck_jnt/end_jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/curve5
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt/L_tube2_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt/L_tube2_Jnt/L_tube3_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt/L_tube2_Jnt/L_tube3_Jnt/L_tube4_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt/L_tube2_Jnt/L_tube3_Jnt/L_tube4_Jnt/L_tubetop_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/curve4
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt/R_tube2_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt/R_tube2_Jnt/R_tube3_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt/R_tube2_Jnt/R_tube3_Jnt/R_tube4_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt/R_tube2_Jnt/R_tube3_Jnt/R_tube4_Jnt/R_tubetop_Jnt
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Tower1 attack
+      takeName: Take 001
+      firstFrame: 50
+      lastFrame: 85
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: L_Tube_Ik
+        weight: 1
+      - path: Neck_ik
+        weight: 1
+      - path: Neckelbow_ctrl
+        weight: 1
+      - path: pCylinder6
+        weight: 1
+      - path: Pipe_Left_Bottom
+        weight: 1
+      - path: Pipe_Left_Bottom/group7
+        weight: 1
+      - path: Pipe_Left_Bottom/group7/L_bot_cluster
+        weight: 1
+      - path: Pipe_Left_Mid
+        weight: 1
+      - path: Pipe_Left_Mid/group6
+        weight: 1
+      - path: Pipe_Left_Mid/group6/L_mid_cluster
+        weight: 1
+      - path: Pipe_Right_Bottom
+        weight: 1
+      - path: Pipe_Right_Bottom/group3
+        weight: 1
+      - path: Pipe_Right_Bottom/group3/R_Bot_cluster
+        weight: 1
+      - path: Pipe_Right_Mid
+        weight: 1
+      - path: Pipe_Right_Mid/group2
+        weight: 1
+      - path: Pipe_Right_Mid/group2/R_mid_cluster
+        weight: 1
+      - path: R_tube_ik
+        weight: 1
+      - path: s
+        weight: 1
+      - path: s/L_Pipe_Top
+        weight: 1
+      - path: s/L_Pipe_Top/group5
+        weight: 1
+      - path: s/L_Pipe_Top/group5/L_top_cluster
+        weight: 1
+      - path: s/R_Pipe_top
+        weight: 1
+      - path: s/R_Pipe_top/group4
+        weight: 1
+      - path: s/R_Pipe_top/group4/R_top_cluster
+        weight: 1
+      - path: Towerroot_jnt
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt/BotNeck_jnt
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt/BotNeck_jnt/Neck_jnt_buff
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt/BotNeck_jnt/Neck_jnt_buff/Top_neck_jnt
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt/BotNeck_jnt/Neck_jnt_buff/Top_neck_jnt/end_jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/curve5
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt/L_tube2_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt/L_tube2_Jnt/L_tube3_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt/L_tube2_Jnt/L_tube3_Jnt/L_tube4_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt/L_tube2_Jnt/L_tube3_Jnt/L_tube4_Jnt/L_tubetop_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/curve4
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt/R_tube2_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt/R_tube2_Jnt/R_tube3_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt/R_tube2_Jnt/R_tube3_Jnt/R_tube4_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt/R_tube2_Jnt/R_tube3_Jnt/R_tube4_Jnt/R_tubetop_Jnt
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Laser start
+      takeName: Take 001
+      firstFrame: 85
+      lastFrame: 99
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: L_Tube_Ik
+        weight: 1
+      - path: Neck_ik
+        weight: 1
+      - path: Neckelbow_ctrl
+        weight: 1
+      - path: pCylinder6
+        weight: 1
+      - path: Pipe_Left_Bottom
+        weight: 1
+      - path: Pipe_Left_Bottom/group7
+        weight: 1
+      - path: Pipe_Left_Bottom/group7/L_bot_cluster
+        weight: 1
+      - path: Pipe_Left_Mid
+        weight: 1
+      - path: Pipe_Left_Mid/group6
+        weight: 1
+      - path: Pipe_Left_Mid/group6/L_mid_cluster
+        weight: 1
+      - path: Pipe_Right_Bottom
+        weight: 1
+      - path: Pipe_Right_Bottom/group3
+        weight: 1
+      - path: Pipe_Right_Bottom/group3/R_Bot_cluster
+        weight: 1
+      - path: Pipe_Right_Mid
+        weight: 1
+      - path: Pipe_Right_Mid/group2
+        weight: 1
+      - path: Pipe_Right_Mid/group2/R_mid_cluster
+        weight: 1
+      - path: R_tube_ik
+        weight: 1
+      - path: s
+        weight: 1
+      - path: s/L_Pipe_Top
+        weight: 1
+      - path: s/L_Pipe_Top/group5
+        weight: 1
+      - path: s/L_Pipe_Top/group5/L_top_cluster
+        weight: 1
+      - path: s/R_Pipe_top
+        weight: 1
+      - path: s/R_Pipe_top/group4
+        weight: 1
+      - path: s/R_Pipe_top/group4/R_top_cluster
+        weight: 1
+      - path: Towerroot_jnt
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt/BotNeck_jnt
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt/BotNeck_jnt/Neck_jnt_buff
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt/BotNeck_jnt/Neck_jnt_buff/Top_neck_jnt
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt/BotNeck_jnt/Neck_jnt_buff/Top_neck_jnt/end_jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/curve5
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt/L_tube2_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt/L_tube2_Jnt/L_tube3_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt/L_tube2_Jnt/L_tube3_Jnt/L_tube4_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt/L_tube2_Jnt/L_tube3_Jnt/L_tube4_Jnt/L_tubetop_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/curve4
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt/R_tube2_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt/R_tube2_Jnt/R_tube3_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt/R_tube2_Jnt/R_tube3_Jnt/R_tube4_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt/R_tube2_Jnt/R_tube3_Jnt/R_tube4_Jnt/R_tubetop_Jnt
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: laser mid
+      takeName: Take 001
+      firstFrame: 100
+      lastFrame: 104
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: L_Tube_Ik
+        weight: 1
+      - path: Neck_ik
+        weight: 1
+      - path: Neckelbow_ctrl
+        weight: 1
+      - path: pCylinder6
+        weight: 1
+      - path: Pipe_Left_Bottom
+        weight: 1
+      - path: Pipe_Left_Bottom/group7
+        weight: 1
+      - path: Pipe_Left_Bottom/group7/L_bot_cluster
+        weight: 1
+      - path: Pipe_Left_Mid
+        weight: 1
+      - path: Pipe_Left_Mid/group6
+        weight: 1
+      - path: Pipe_Left_Mid/group6/L_mid_cluster
+        weight: 1
+      - path: Pipe_Right_Bottom
+        weight: 1
+      - path: Pipe_Right_Bottom/group3
+        weight: 1
+      - path: Pipe_Right_Bottom/group3/R_Bot_cluster
+        weight: 1
+      - path: Pipe_Right_Mid
+        weight: 1
+      - path: Pipe_Right_Mid/group2
+        weight: 1
+      - path: Pipe_Right_Mid/group2/R_mid_cluster
+        weight: 1
+      - path: R_tube_ik
+        weight: 1
+      - path: s
+        weight: 1
+      - path: s/L_Pipe_Top
+        weight: 1
+      - path: s/L_Pipe_Top/group5
+        weight: 1
+      - path: s/L_Pipe_Top/group5/L_top_cluster
+        weight: 1
+      - path: s/R_Pipe_top
+        weight: 1
+      - path: s/R_Pipe_top/group4
+        weight: 1
+      - path: s/R_Pipe_top/group4/R_top_cluster
+        weight: 1
+      - path: Towerroot_jnt
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt/BotNeck_jnt
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt/BotNeck_jnt/Neck_jnt_buff
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt/BotNeck_jnt/Neck_jnt_buff/Top_neck_jnt
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt/BotNeck_jnt/Neck_jnt_buff/Top_neck_jnt/end_jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/curve5
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt/L_tube2_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt/L_tube2_Jnt/L_tube3_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt/L_tube2_Jnt/L_tube3_Jnt/L_tube4_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt/L_tube2_Jnt/L_tube3_Jnt/L_tube4_Jnt/L_tubetop_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/curve4
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt/R_tube2_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt/R_tube2_Jnt/R_tube3_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt/R_tube2_Jnt/R_tube3_Jnt/R_tube4_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt/R_tube2_Jnt/R_tube3_Jnt/R_tube4_Jnt/R_tubetop_Jnt
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Laser end
+      takeName: Take 001
+      firstFrame: 109
+      lastFrame: 123
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: L_Tube_Ik
+        weight: 1
+      - path: Neck_ik
+        weight: 1
+      - path: Neckelbow_ctrl
+        weight: 1
+      - path: pCylinder6
+        weight: 1
+      - path: Pipe_Left_Bottom
+        weight: 1
+      - path: Pipe_Left_Bottom/group7
+        weight: 1
+      - path: Pipe_Left_Bottom/group7/L_bot_cluster
+        weight: 1
+      - path: Pipe_Left_Mid
+        weight: 1
+      - path: Pipe_Left_Mid/group6
+        weight: 1
+      - path: Pipe_Left_Mid/group6/L_mid_cluster
+        weight: 1
+      - path: Pipe_Right_Bottom
+        weight: 1
+      - path: Pipe_Right_Bottom/group3
+        weight: 1
+      - path: Pipe_Right_Bottom/group3/R_Bot_cluster
+        weight: 1
+      - path: Pipe_Right_Mid
+        weight: 1
+      - path: Pipe_Right_Mid/group2
+        weight: 1
+      - path: Pipe_Right_Mid/group2/R_mid_cluster
+        weight: 1
+      - path: R_tube_ik
+        weight: 1
+      - path: s
+        weight: 1
+      - path: s/L_Pipe_Top
+        weight: 1
+      - path: s/L_Pipe_Top/group5
+        weight: 1
+      - path: s/L_Pipe_Top/group5/L_top_cluster
+        weight: 1
+      - path: s/R_Pipe_top
+        weight: 1
+      - path: s/R_Pipe_top/group4
+        weight: 1
+      - path: s/R_Pipe_top/group4/R_top_cluster
+        weight: 1
+      - path: Towerroot_jnt
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt/BotNeck_jnt
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt/BotNeck_jnt/Neck_jnt_buff
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt/BotNeck_jnt/Neck_jnt_buff/Top_neck_jnt
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt/BotNeck_jnt/Neck_jnt_buff/Top_neck_jnt/end_jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/curve5
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt/L_tube2_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt/L_tube2_Jnt/L_tube3_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt/L_tube2_Jnt/L_tube3_Jnt/L_tube4_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt/L_tube2_Jnt/L_tube3_Jnt/L_tube4_Jnt/L_tubetop_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/curve4
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt/R_tube2_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt/R_tube2_Jnt/R_tube3_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt/R_tube2_Jnt/R_tube3_Jnt/R_tube4_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt/R_tube2_Jnt/R_tube3_Jnt/R_tube4_Jnt/R_tubetop_Jnt
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Dance start
+      takeName: Take 001
+      firstFrame: 124
+      lastFrame: 132
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: L_Tube_Ik
+        weight: 1
+      - path: Neck_ik
+        weight: 1
+      - path: Neckelbow_ctrl
+        weight: 1
+      - path: pCylinder6
+        weight: 1
+      - path: Pipe_Left_Bottom
+        weight: 1
+      - path: Pipe_Left_Bottom/group7
+        weight: 1
+      - path: Pipe_Left_Bottom/group7/L_bot_cluster
+        weight: 1
+      - path: Pipe_Left_Mid
+        weight: 1
+      - path: Pipe_Left_Mid/group6
+        weight: 1
+      - path: Pipe_Left_Mid/group6/L_mid_cluster
+        weight: 1
+      - path: Pipe_Right_Bottom
+        weight: 1
+      - path: Pipe_Right_Bottom/group3
+        weight: 1
+      - path: Pipe_Right_Bottom/group3/R_Bot_cluster
+        weight: 1
+      - path: Pipe_Right_Mid
+        weight: 1
+      - path: Pipe_Right_Mid/group2
+        weight: 1
+      - path: Pipe_Right_Mid/group2/R_mid_cluster
+        weight: 1
+      - path: R_tube_ik
+        weight: 1
+      - path: s
+        weight: 1
+      - path: s/L_Pipe_Top
+        weight: 1
+      - path: s/L_Pipe_Top/group5
+        weight: 1
+      - path: s/L_Pipe_Top/group5/L_top_cluster
+        weight: 1
+      - path: s/R_Pipe_top
+        weight: 1
+      - path: s/R_Pipe_top/group4
+        weight: 1
+      - path: s/R_Pipe_top/group4/R_top_cluster
+        weight: 1
+      - path: Towerroot_jnt
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt/BotNeck_jnt
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt/BotNeck_jnt/Neck_jnt_buff
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt/BotNeck_jnt/Neck_jnt_buff/Top_neck_jnt
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt/BotNeck_jnt/Neck_jnt_buff/Top_neck_jnt/end_jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/curve5
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt/L_tube2_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt/L_tube2_Jnt/L_tube3_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt/L_tube2_Jnt/L_tube3_Jnt/L_tube4_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt/L_tube2_Jnt/L_tube3_Jnt/L_tube4_Jnt/L_tubetop_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/curve4
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt/R_tube2_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt/R_tube2_Jnt/R_tube3_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt/R_tube2_Jnt/R_tube3_Jnt/R_tube4_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt/R_tube2_Jnt/R_tube3_Jnt/R_tube4_Jnt/R_tubetop_Jnt
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Dancing
+      takeName: Take 001
+      firstFrame: 133
+      lastFrame: 155
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: L_Tube_Ik
+        weight: 1
+      - path: Neck_ik
+        weight: 1
+      - path: Neckelbow_ctrl
+        weight: 1
+      - path: pCylinder6
+        weight: 1
+      - path: Pipe_Left_Bottom
+        weight: 1
+      - path: Pipe_Left_Bottom/group7
+        weight: 1
+      - path: Pipe_Left_Bottom/group7/L_bot_cluster
+        weight: 1
+      - path: Pipe_Left_Mid
+        weight: 1
+      - path: Pipe_Left_Mid/group6
+        weight: 1
+      - path: Pipe_Left_Mid/group6/L_mid_cluster
+        weight: 1
+      - path: Pipe_Right_Bottom
+        weight: 1
+      - path: Pipe_Right_Bottom/group3
+        weight: 1
+      - path: Pipe_Right_Bottom/group3/R_Bot_cluster
+        weight: 1
+      - path: Pipe_Right_Mid
+        weight: 1
+      - path: Pipe_Right_Mid/group2
+        weight: 1
+      - path: Pipe_Right_Mid/group2/R_mid_cluster
+        weight: 1
+      - path: R_tube_ik
+        weight: 1
+      - path: s
+        weight: 1
+      - path: s/L_Pipe_Top
+        weight: 1
+      - path: s/L_Pipe_Top/group5
+        weight: 1
+      - path: s/L_Pipe_Top/group5/L_top_cluster
+        weight: 1
+      - path: s/R_Pipe_top
+        weight: 1
+      - path: s/R_Pipe_top/group4
+        weight: 1
+      - path: s/R_Pipe_top/group4/R_top_cluster
+        weight: 1
+      - path: Towerroot_jnt
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt/BotNeck_jnt
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt/BotNeck_jnt/Neck_jnt_buff
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt/BotNeck_jnt/Neck_jnt_buff/Top_neck_jnt
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt/BotNeck_jnt/Neck_jnt_buff/Top_neck_jnt/end_jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/curve5
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt/L_tube2_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt/L_tube2_Jnt/L_tube3_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt/L_tube2_Jnt/L_tube3_Jnt/L_tube4_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt/L_tube2_Jnt/L_tube3_Jnt/L_tube4_Jnt/L_tubetop_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/curve4
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt/R_tube2_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt/R_tube2_Jnt/R_tube3_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt/R_tube2_Jnt/R_tube3_Jnt/R_tube4_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt/R_tube2_Jnt/R_tube3_Jnt/R_tube4_Jnt/R_tubetop_Jnt
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Dance fin
+      takeName: Take 001
+      firstFrame: 156
+      lastFrame: 161
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: L_Tube_Ik
+        weight: 1
+      - path: Neck_ik
+        weight: 1
+      - path: Neckelbow_ctrl
+        weight: 1
+      - path: pCylinder6
+        weight: 1
+      - path: Pipe_Left_Bottom
+        weight: 1
+      - path: Pipe_Left_Bottom/group7
+        weight: 1
+      - path: Pipe_Left_Bottom/group7/L_bot_cluster
+        weight: 1
+      - path: Pipe_Left_Mid
+        weight: 1
+      - path: Pipe_Left_Mid/group6
+        weight: 1
+      - path: Pipe_Left_Mid/group6/L_mid_cluster
+        weight: 1
+      - path: Pipe_Right_Bottom
+        weight: 1
+      - path: Pipe_Right_Bottom/group3
+        weight: 1
+      - path: Pipe_Right_Bottom/group3/R_Bot_cluster
+        weight: 1
+      - path: Pipe_Right_Mid
+        weight: 1
+      - path: Pipe_Right_Mid/group2
+        weight: 1
+      - path: Pipe_Right_Mid/group2/R_mid_cluster
+        weight: 1
+      - path: R_tube_ik
+        weight: 1
+      - path: s
+        weight: 1
+      - path: s/L_Pipe_Top
+        weight: 1
+      - path: s/L_Pipe_Top/group5
+        weight: 1
+      - path: s/L_Pipe_Top/group5/L_top_cluster
+        weight: 1
+      - path: s/R_Pipe_top
+        weight: 1
+      - path: s/R_Pipe_top/group4
+        weight: 1
+      - path: s/R_Pipe_top/group4/R_top_cluster
+        weight: 1
+      - path: Towerroot_jnt
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt/BotNeck_jnt
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt/BotNeck_jnt/Neck_jnt_buff
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt/BotNeck_jnt/Neck_jnt_buff/Top_neck_jnt
+        weight: 1
+      - path: Towerroot_jnt/Base_jnt/BotNeck_jnt/Neck_jnt_buff/Top_neck_jnt/end_jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/curve5
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt/L_tube2_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt/L_tube2_Jnt/L_tube3_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt/L_tube2_Jnt/L_tube3_Jnt/L_tube4_Jnt
+        weight: 1
+      - path: Towerroot_jnt/L_Base_Jnt/L_Cannistertop_Jnt/L_tube1_Jnt/L_tube2_Jnt/L_tube3_Jnt/L_tube4_Jnt/L_tubetop_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/curve4
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt/R_tube2_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt/R_tube2_Jnt/R_tube3_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt/R_tube2_Jnt/R_tube3_Jnt/R_tube4_Jnt
+        weight: 1
+      - path: Towerroot_jnt/R_Base_Jnt/R_Cannistertop_Jnt/R_tube1_Jnt/R_tube2_Jnt/R_tube3_Jnt/R_tube4_Jnt/R_tubetop_Jnt
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
