@@ -26,6 +26,7 @@ public class Tower_03 : Tower
         if (targets.Count <= 0)
         {
             em.enabled = false;
+            anim.SetBool("T3_attack", false);
         }
     }
 
@@ -47,6 +48,7 @@ public class Tower_03 : Tower
         {
             // Enable particle emissions
             em.enabled = true;
+            anim.SetBool("T3_attack", true);
             // For each target, slow and damage
             for (int i = 0; i < targets.Count; i++)
             {

@@ -30,6 +30,7 @@ public class Tower_01 : Tower
                 BulletBehavior bulletPrefab = Instantiate(bullet, transform.position, transform.rotation);
                 bulletPrefab.targetEnemy = targetToShoot.transform;
                 bullets.Add(bulletPrefab);
+                anim.SetTrigger("T1_attack");
                 // Set timer back based on current level
                 instantiationTimer = instantiationTimerUpdate - (level * .3f);
             }

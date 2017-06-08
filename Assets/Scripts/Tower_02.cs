@@ -6,7 +6,7 @@ public class Tower_02 : Tower
 {
     private LineRenderer lRenderer;
     // Use this for initialization
-    void Start()
+    void Awake()
     {
         // Set linerenderer
         lRenderer = gameObject.GetComponent<LineRenderer>();
@@ -19,6 +19,7 @@ public class Tower_02 : Tower
         if (targets.Count <= 0)
         {
             lRenderer.enabled = false;
+            anim.SetBool("T2_attack", false);
         }
         // If the linerenderer is disabled then damage the targets
         if (lRenderer.enabled)
@@ -36,6 +37,7 @@ public class Tower_02 : Tower
             Vector3[] positions = new[] { transform.position, targetToShoot.transform.position };
             // Enable line renderer and set the positions of the line
             lRenderer.enabled = true;
+            anim.SetBool("T2_attack", true);
             lRenderer.SetPositions(positions);
         }
     }

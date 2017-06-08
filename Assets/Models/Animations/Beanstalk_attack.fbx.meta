@@ -1,0 +1,164 @@
+fileFormatVersion: 2
+guid: b9057afd1e98b554dafbaf4f96305a7c
+timeCreated: 1496720858
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Arm_1
+    100002: Arm_2
+    100004: Arm_3
+    100006: Arm_buffer_grp_01
+    100008: Arm_buffer_grp_02
+    100010: Arm_buffer_grp_03
+    100012: Arm_ctrl_1
+    100014: Arm_ctrl_2
+    100016: Arm_ctrl_3
+    100018: Arm_jnt_1
+    100020: Arm_jnt_2
+    100022: Arm_jnt_3
+    100024: Base_buffer_grp
+    100026: //RootNode
+    100028: Global_ctrl
+    100030: L_Claw
+    100032: L_Claw1
+    100034: L_Pincer_ctrl
+    100036: L_pincer_grp
+    100038: L_Pincer_jnt_1
+    100040: Pincer_head
+    100042: Pot
+    100044: Pot_ctrl
+    100046: Pot_jnt
+    100048: R_Pincer_ctrl
+    100050: R_pincer_grp
+    100052: R_Pincer_jnt_1
+    100054: Root_buffer_grp
+    100056: Root_ctrl
+    100058: Root_jnt
+    100060: Wrist_buffer_grp
+    100062: Wrist_ctrl
+    100064: Wrist_jnt
+    400000: Arm_1
+    400002: Arm_2
+    400004: Arm_3
+    400006: Arm_buffer_grp_01
+    400008: Arm_buffer_grp_02
+    400010: Arm_buffer_grp_03
+    400012: Arm_ctrl_1
+    400014: Arm_ctrl_2
+    400016: Arm_ctrl_3
+    400018: Arm_jnt_1
+    400020: Arm_jnt_2
+    400022: Arm_jnt_3
+    400024: Base_buffer_grp
+    400026: //RootNode
+    400028: Global_ctrl
+    400030: L_Claw
+    400032: L_Claw1
+    400034: L_Pincer_ctrl
+    400036: L_pincer_grp
+    400038: L_Pincer_jnt_1
+    400040: Pincer_head
+    400042: Pot
+    400044: Pot_ctrl
+    400046: Pot_jnt
+    400048: R_Pincer_ctrl
+    400050: R_pincer_grp
+    400052: R_Pincer_jnt_1
+    400054: Root_buffer_grp
+    400056: Root_ctrl
+    400058: Root_jnt
+    400060: Wrist_buffer_grp
+    400062: Wrist_ctrl
+    400064: Wrist_jnt
+    2300000: Arm_1
+    2300002: Arm_2
+    2300004: Arm_3
+    2300006: L_Claw
+    2300008: L_Claw1
+    2300010: Pincer_head
+    2300012: Pot
+    3300000: Arm_1
+    3300002: Arm_2
+    3300004: Arm_3
+    3300006: L_Claw
+    3300008: L_Claw1
+    3300010: Pincer_head
+    3300012: Pot
+    4300000: Pot
+    4300002: Arm_1
+    4300004: Arm_2
+    4300006: Arm_3
+    4300008: Pincer_head
+    4300010: L_Claw
+    4300012: L_Claw1
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -4,16 +4,25 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
-
+    public Animator anim;
     public List<GameObject> targets;
     public BulletBehavior bullet;
     public bool placed = false;
     public int level = 1;
+    public float speedR = 10f;
+
+    protected void Start()
+    {
+        anim = GetComponentInChildren<Animator>();
+    }
 
     // Update is called once per frame
     protected virtual void FixedUpdate()
     {
-        Attack();
+        if (placed)
+        {
+            Attack();
+        }
     }
 
     // Add enemy to list to attack
@@ -40,6 +49,10 @@ public class Tower : MonoBehaviour
         if (targets.Count >= 1 && targets[0] != null)
         {
             Shoot(targets[0]);
+
+            Vector3 targetDir = targets[0].transform.position;
+            targetDir.y = transform.position.y;
+            transform.LookAt(targetDir);
         }
         // If there are targets but it has been destroyed remove it from the list
         else if (targets.Count >= 1 && targets[0] == null)
