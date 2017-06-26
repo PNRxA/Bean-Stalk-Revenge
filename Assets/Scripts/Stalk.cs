@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Stalk : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Stalk : MonoBehaviour
     public float speed = 20f;
     public ParticleSystem explosion;
     public bool exploded = false;
+    public float health = 100;
 
     private Vector3 beanTarget;
     private GameObject activeBean;
@@ -18,6 +20,7 @@ public class Stalk : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         MoveBean();
         // If there is a target and an active bean then spawn an explosion and destroy if it's reached the target
         if (beanTarget != null && activeBean != null)

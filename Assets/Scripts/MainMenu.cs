@@ -9,6 +9,10 @@ public class MainMenu : MonoBehaviour
     public float audioSlider, volMute;
     public AudioSource audi;
 
+    public GUIStyle style1;
+    public GUIStyle style2;
+    public GUIStyle style3;
+
     // Use this for initialization
     void Start()
     {
@@ -44,11 +48,15 @@ public class MainMenu : MonoBehaviour
         float scrW = Screen.width / 16f;
         float scrH = Screen.height / 9f;
 
+        GUI.skin.button = style1;
+        GUI.skin.box = style2;
+        GUI.skin.textField = style3;
+
         GUI.Box(new Rect(0, 0, Screen.width, Screen.height), "");
 
         if (!showOp)
         {
-            GUI.Box(new Rect(4f * scrW, 0.25f * scrH, 8f * scrW, 1.5f * scrH), "Tower Defence");
+            GUI.TextField(new Rect(4f * scrW, 0.25f * scrH, 8f * scrW, 1.5f * scrH), "Bean-Stalk-Revenge");
 
             if (GUI.Button(new Rect(3f * scrW, 5f * scrH, 3f * scrW, 2f * scrH), "Play"))
             {
@@ -76,7 +84,7 @@ public class MainMenu : MonoBehaviour
                 GUI.HorizontalSlider(new Rect(5f * scrW, 3f * scrH, 5f * scrW, 0.5f * scrH), audioSlider, 0f, 1f);
             }
 
-            GUI.Box(new Rect(2f * scrW, 3f * scrH, 3f * scrW, 0.5f * scrH), "Volume");
+            GUI.TextField(new Rect(2f * scrW, 2.8f * scrH, 3f * scrW, 0.5f * scrH), "Volume");
 
             if (GUI.Button(new Rect(2f * scrW, 1f * scrH, 2f * scrW, 1f * scrH), "Main Menu"))
             {

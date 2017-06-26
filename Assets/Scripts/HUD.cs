@@ -19,6 +19,10 @@ public class HUD : MonoBehaviour
     private RaycastHit hit;
     private Ray ray;
 
+    public GUIStyle style1;
+    public GUIStyle style2;
+    public GUIStyle style3;
+
     // Use this for initialization
     void Start()
     {
@@ -39,13 +43,17 @@ public class HUD : MonoBehaviour
             TowerToCursor();
         }
         mousePos = Input.mousePosition;
-
     }
 
     void OnGUI()
     {
         scrW = Screen.width / 16;
         scrH = Screen.height / 10;
+
+        GUI.skin.button = style1;
+        GUI.skin.box = style2;
+        GUI.skin.textField = style3;
+
         // The buy part of the menu
         TowerBuyMenu();
         // Only show upgrad menu when clicking on a tower
@@ -75,24 +83,24 @@ public class HUD : MonoBehaviour
             waveInfo = null;
         }
 
-        GUI.Box(new Rect(0, 0, scrW * 4.18f, scrH * 1.2f), "Buy Towers \nMoney: " + GameManager.Money + waveInfo);
+        GUI.TextField(new Rect(0, scrH * 1.5f, scrW * 4.18f, scrH * 1.2f), "Buy Towers \nMoney: " + GameManager.Money + waveInfo);
 
-        GUI.Box(new Rect(scrW, scrH, scrW * 4.18f, scrH), "Lives: " + GameManager.health);
+        GUI.TextField(new Rect(scrW, scrH * 1.4f, scrW * 4.20f, scrH), "Lives: " + GameManager.health);
         if (!placingTower)
         {
-            if (GUI.Button(new Rect(scrW, scrH * 2, scrW * 3, scrH), "Basic Tower \n250 Beans"))
+            if (GUI.Button(new Rect(scrW, scrH * 3, scrW * 3, scrH), "Basic Tower \n250 Beans"))
             {
                 // Create tower ID and COST
                 CreateTower(0, 250);
             }
 
-            if (GUI.Button(new Rect(scrW, scrH * 3.5f, scrW * 3, scrH), "Intermediate Tower \n500 Beans"))
+            if (GUI.Button(new Rect(scrW, scrH * 4.5f, scrW * 3, scrH), "Intermediate Tower \n500 Beans"))
             {
                 // Create tower ID and COST
                 CreateTower(1, 500);
             }
 
-            if (GUI.Button(new Rect(scrW, scrH * 5, scrW * 3, scrH), "Advanced Tower \n1000 Beans"))
+            if (GUI.Button(new Rect(scrW, scrH * 6, scrW * 3, scrH), "Advanced Tower \n1000 Beans"))
             {
                 // Create tower ID and COST
                 CreateTower(2, 1000);
@@ -101,7 +109,7 @@ public class HUD : MonoBehaviour
         // If countdown is more than 3 show options to skip countdown
         if (WaveSpawner.countdown > 3)
         {
-            if (GUI.Button(new Rect(scrW, scrH * 6.5f, scrW * 3, scrH), "Start next wave NOW"))
+            if (GUI.Button(new Rect(scrW, scrH * 7.5f, scrW * 3, scrH), "Start next wave NOW"))
             {
                 WaveSpawner.countdown = 1;
             }
@@ -109,7 +117,7 @@ public class HUD : MonoBehaviour
         // String to determine button icon based on game speed
         string speedUpText = Time.timeScale == 2 ? ">>" : Time.timeScale == 4 ? ">>>" : ">";
 
-        if (GUI.Button(new Rect(scrW, scrH * 8, scrW, scrH), speedUpText))
+        if (GUI.Button(new Rect(scrW, scrH * 8.7f, scrW, scrH), speedUpText))
         {
             // Change gamespeed based on current gamespeed
             Time.timeScale = Time.timeScale < 4 ? Time.timeScale *= 2 : Time.timeScale = 1;
@@ -131,10 +139,10 @@ public class HUD : MonoBehaviour
             towerUpgradeCostString = "Fully Upgraded";
         }
         GUI.BeginGroup(new Rect(0, 0, scrW * 4, scrH * 10));
-        GUI.Box(new Rect(0, 0, scrW * 4, scrH * 10), "");
-        GUI.Box(new Rect(0, 0, scrW * 4, scrH * 2), "Upgrades");
+        GUI.Box(new Rect(scrW * -1, 0, scrW * 4, scrH * 10), "");
+        GUI.TextField(new Rect(scrW * -0.5f, 0, scrW * 4, scrH * 2.5f), "Upgrades");
         // Upgrade button displays the cost of the upgrade and upgrades tower
-        if (GUI.Button(new Rect(scrW, scrH * 3, scrW * 2, scrH), "Upgrade: " + towerUpgradeCostString))
+        if (GUI.Button(new Rect(scrW * 0.5f, scrH * 3, scrW * 2, scrH), "Upgrade: " + towerUpgradeCostString))
         {
             // If you have the money then upgrade and deduct the cost 
             if (GameManager.Money >= towerUpgradeCost && towerToUpgrade.level <= 3)
@@ -144,7 +152,7 @@ public class HUD : MonoBehaviour
             }
         }
         // Delete tower
-        if (GUI.Button(new Rect(scrW, scrH * 4, scrW * 2, scrH), "Delete"))
+        if (GUI.Button(new Rect(scrW * 0.5f, scrH * 4, scrW * 2, scrH), "Delete"))
         {
             Destroy(towerSelected.gameObject);
         }

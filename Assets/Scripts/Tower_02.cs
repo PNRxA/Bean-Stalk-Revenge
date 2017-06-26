@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Tower_02 : Tower
 {
+    public Transform lasorPos;
     private LineRenderer lRenderer;
     // Use this for initialization
     void Awake()
@@ -34,7 +35,7 @@ public class Tower_02 : Tower
         if (placed)
         {
             // Set position of attack line from the current transform position to the target position
-            Vector3[] positions = new[] { transform.position, targetToShoot.transform.position };
+            Vector3[] positions = new[] { lasorPos.position, targetToShoot.transform.position };
             // Enable line renderer and set the positions of the line
             lRenderer.enabled = true;
             anim.SetBool("T2_attack", true);
